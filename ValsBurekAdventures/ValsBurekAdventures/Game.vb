@@ -11,6 +11,9 @@
     Dim PlayerImg1 As Image = My.Resources.Meme7
     Dim PlayerImg2 As Image = My.Resources.Meme8
 
+    Dim TimeInvinc As Single
+
+
     Private Sub Game_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
 
@@ -25,6 +28,8 @@
 
         Platforms = New List(Of PictureBox)
 
+        TimeInvinc = 0
+
         Platforms.Add(Platform1)
         Platforms.Add(Platform2)
         Platforms.Add(Platform3)
@@ -36,7 +41,7 @@
         Burek.Top = -100
         Burek.Left = Rnd() * Me.Size.Width - 60
 
-        Jogurt.Top = -100
+        Jogurt.Top = -500
         Jogurt.Left = Rnd() * Me.Size.Width - 60
 
         Cindric.Top = -200
@@ -77,6 +82,8 @@
 
         LabelHeightDash.Top = YPos Mod Me.Size.Height
 
+        TimeInvinc -= 1
+
         If KeyLeft Then
             Player.Left -= 5
         End If
@@ -100,7 +107,7 @@
         For i = 0 To 2
             Platforms(i).Top += YVel
 
-            If Platforms(i).Bounds.IntersectsWith(Player.Bounds) And YVel < 0 Then
+            If Platforms(i).Bounds.IntersectsWith(Player.Bounds) And YVel < 10 Then
                 My.Computer.Audio.Play(My.Resources.Boing, AudioPlayMode.Background)
                 YVel = 30
 
@@ -119,7 +126,10 @@
             BurekCount += 1
             Burek.Top = -100
             Burek.Left = Rnd() * Me.Size.Width - 60
-            My.Computer.Audio.Play(My.Resources.Eat, AudioPlayMode.Background)
+
+            If TimeInvinc < 0 Then
+                My.Computer.Audio.Play(My.Resources.Eat, AudioPlayMode.Background)
+            End If
 
             If Player.Image Is PlayerImg1 Then
                 Player.Image = PlayerImg2
@@ -133,7 +143,7 @@
         End If
 
         Cindric.Top += YVel
-        If Cindric.Bounds.IntersectsWith(Player.Bounds) Then
+        If Cindric.Bounds.IntersectsWith(Player.Bounds) And TimeInvinc <= 0 Then
             Smrt(True)
         End If
         If Cindric.Top > Me.Size.Height + 150 Then
@@ -143,17 +153,20 @@
 
         Jogurt.Top += YVel
         If Jogurt.Bounds.IntersectsWith(Player.Bounds) Then
-            Jogurt.Top = -100
+            TimeInvinc = 60 * 3
+            YVel = 60
+
+            Jogurt.Top = -1500
             Jogurt.Left = Rnd() * Me.Size.Width - 60
 
             My.Computer.Audio.Play(My.Resources.gg, AudioPlayMode.Background)
         End If
-        If Jogurt.Top > Me.Size.Height + 150 Then
-            Jogurt.Top = -100
+        If Jogurt.Top > Me.Size.Height + 400 Then
+            Jogurt.Top = -1000
             Jogurt.Left = Rnd() * Me.Size.Width - 60
         End If
 
-        If YVel < -20 Then
+        If YVel < -30 Then
             Smrt(False)
         End If
 
@@ -195,6 +208,9 @@
         BurekCount = 0
         Burek.Top = -100
         Burek.Left = Rnd() * Me.Size.Width - 60
+
+        Jogurt.Top = -500
+        Jogurt.Left = Rnd() * Me.Size.Width - 60
 
         Cindric.Top = -100
         Cindric.Left = Rnd() * Me.Size.Width - 100
