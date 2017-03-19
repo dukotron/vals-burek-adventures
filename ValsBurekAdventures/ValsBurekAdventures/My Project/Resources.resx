@@ -130,4 +130,28 @@
   <data name="580b57fbd9996e24bc43be68" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\580b57fbd9996e24bc43be68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Boing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boing.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Eat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Meme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Meme0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meme0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Meme7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meme7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Meme8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meme8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Upper_Cut_SoundBible_com_1272257235" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Upper Cut-SoundBible.com-1272257235.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_0477" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0477.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

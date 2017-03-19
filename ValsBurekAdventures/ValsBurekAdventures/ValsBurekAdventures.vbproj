@@ -166,5 +166,35 @@
   <ItemGroup>
     <None Include="Resources\580b57fbd9996e24bc43be68.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meme5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meme7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meme8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0477.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0477.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upper Cut-SoundBible.com-1272257235.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eat.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meme0.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

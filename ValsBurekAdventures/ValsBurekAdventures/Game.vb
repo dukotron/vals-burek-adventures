@@ -8,6 +8,9 @@
 
     Dim Platforms As List(Of PictureBox)
 
+    Dim PlayerImg1 As Image = My.Resources.Meme7
+    Dim PlayerImg2 As Image = My.Resources.Meme8
+
     Private Sub Game_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
 
@@ -33,6 +36,8 @@
         Burek.Top = -100
         Burek.Left = Rnd() * Me.Size.Width - 60
 
+        Jogurt.Top = -100
+        Jogurt.Left = Rnd() * Me.Size.Width - 60
 
         Cindric.Top = -200
         Cindric.Left = Rnd() * Me.Size.Width - 100
@@ -96,6 +101,7 @@
             Platforms(i).Top += YVel
 
             If Platforms(i).Bounds.IntersectsWith(Player.Bounds) And YVel < 0 Then
+                My.Computer.Audio.Play(My.Resources.Boing, AudioPlayMode.Background)
                 YVel = 30
 
                 Platforms(i).Top = -200 - Rnd() * 100
@@ -113,6 +119,13 @@
             BurekCount += 1
             Burek.Top = -100
             Burek.Left = Rnd() * Me.Size.Width - 60
+            My.Computer.Audio.Play(My.Resources.Eat, AudioPlayMode.Background)
+
+            If Player.Image Is PlayerImg1 Then
+                Player.Image = PlayerImg2
+            Else
+                Player.Image = PlayerImg1
+            End If
         End If
         If Burek.Top > Me.Size.Height + 150 Then
             Burek.Top = -100
@@ -128,6 +141,15 @@
             Cindric.Left = Rnd() * Me.Size.Width - 100
         End If
 
+        Jogurt.Top += YVel
+        If Jogurt.Bounds.IntersectsWith(Player.Bounds) Then
+
+        End If
+        If Jogurt.Top > Me.Size.Height + 150 Then
+            Jogurt.Top = -100
+            Jogurt.Left = Rnd() * Me.Size.Width - 60
+        End If
+
         If YVel < -20 Then
             Smrt(False)
         End If
@@ -140,8 +162,10 @@
         Dim mbr As DialogResult
 
         If JeLiCindric Then
+            My.Computer.Audio.Play(My.Resources.Upper_Cut_SoundBible_com_1272257235, AudioPlayMode.Background)
             mbr = MessageBox.Show("Ubio vas je Bibinjac! Želite li probati još jednom? Vaša visina bila je " + Str(Math.Round(YPos / 10)) + ", a pokupili ste " + Str(BurekCount) + " bureka", "Smrt", MessageBoxButtons.YesNo)
         Else
+            My.Computer.Audio.Play(My.Resources._0477, AudioPlayMode.Background)
             mbr = MessageBox.Show("Pali ste u smrt! Želite li probati još jednom? Vaša visina bila je " + Str(Math.Round(YPos / 10)) + ", a pokupili ste " + Str(BurekCount) + " bureka", "Smrt", MessageBoxButtons.YesNo)
         End If
 

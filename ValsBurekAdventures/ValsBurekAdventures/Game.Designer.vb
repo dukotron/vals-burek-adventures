@@ -35,12 +35,14 @@ Partial Class Game
         Me.Platform3 = New System.Windows.Forms.PictureBox()
         Me.Platform2 = New System.Windows.Forms.PictureBox()
         Me.Platform1 = New System.Windows.Forms.PictureBox()
+        Me.Jogurt = New System.Windows.Forms.PictureBox()
         CType(Me.Cindric, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Burek, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Jogurt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UpdateTimer
@@ -94,7 +96,7 @@ Partial Class Game
         '
         'Cindric
         '
-        Me.Cindric.Image = Global.ValsBurekAdventures.My.Resources.Resources._580b57fbd9996e24bc43be68
+        Me.Cindric.Image = Global.ValsBurekAdventures.My.Resources.Resources.Meme
         Me.Cindric.Location = New System.Drawing.Point(227, 209)
         Me.Cindric.Name = "Cindric"
         Me.Cindric.Size = New System.Drawing.Size(100, 93)
@@ -115,7 +117,7 @@ Partial Class Game
         'Player
         '
         Me.Player.BackColor = System.Drawing.Color.Transparent
-        Me.Player.Image = Global.ValsBurekAdventures.My.Resources.Resources.Obama_head
+        Me.Player.Image = Global.ValsBurekAdventures.My.Resources.Resources.Meme7
         Me.Player.InitialImage = Global.ValsBurekAdventures.My.Resources.Resources.Obama_head
         Me.Player.Location = New System.Drawing.Point(152, 423)
         Me.Player.Name = "Player"
@@ -154,12 +156,23 @@ Partial Class Game
         Me.Platform1.TabIndex = 1
         Me.Platform1.TabStop = False
         '
+        'Jogurt
+        '
+        Me.Jogurt.Image = Global.ValsBurekAdventures.My.Resources.Resources.Meme0
+        Me.Jogurt.Location = New System.Drawing.Point(40, 68)
+        Me.Jogurt.Name = "Jogurt"
+        Me.Jogurt.Size = New System.Drawing.Size(47, 50)
+        Me.Jogurt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Jogurt.TabIndex = 10
+        Me.Jogurt.TabStop = False
+        '
         'Game
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(381, 563)
+        Me.Controls.Add(Me.Jogurt)
         Me.Controls.Add(Me.LabelBurek)
         Me.Controls.Add(Me.LabelVisina)
         Me.Controls.Add(Me.Cindric)
@@ -171,6 +184,8 @@ Partial Class Game
         Me.Controls.Add(Me.Platform1)
         Me.Controls.Add(Me.LabelHeightDash)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Game"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Val's Burek Adventures"
@@ -180,6 +195,7 @@ Partial Class Game
         CType(Me.Platform3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Platform2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Platform1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Jogurt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -197,4 +213,5 @@ Partial Class Game
     Friend WithEvents Burek As PictureBox
     Friend WithEvents LabelBurek As Label
     Friend WithEvents Cindric As PictureBox
+    Friend WithEvents Jogurt As PictureBox
 End Class

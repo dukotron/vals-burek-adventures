@@ -29,11 +29,12 @@ Partial Class MainMenu
         'ButtonStart
         '
         Me.ButtonStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ButtonStart.Image = Global.ValsBurekAdventures.My.Resources.Resources.Burek
         Me.ButtonStart.Location = New System.Drawing.Point(12, 103)
         Me.ButtonStart.Name = "ButtonStart"
         Me.ButtonStart.Size = New System.Drawing.Size(261, 69)
         Me.ButtonStart.TabIndex = 0
-        Me.ButtonStart.Text = "Burek!!"
+        Me.ButtonStart.Text = "Burek :)))"
         Me.ButtonStart.UseVisualStyleBackColor = True
         '
         'ButtonExit
@@ -43,7 +44,7 @@ Partial Class MainMenu
         Me.ButtonExit.Name = "ButtonExit"
         Me.ButtonExit.Size = New System.Drawing.Size(261, 69)
         Me.ButtonExit.TabIndex = 1
-        Me.ButtonExit.Text = "ne burek"
+        Me.ButtonExit.Text = "Ne burek :'("
         Me.ButtonExit.UseVisualStyleBackColor = True
         '
         'MainMenu
@@ -51,9 +52,11 @@ Partial Class MainMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(285, 272)
+        Me.ClientSize = New System.Drawing.Size(285, 273)
         Me.Controls.Add(Me.ButtonExit)
         Me.Controls.Add(Me.ButtonStart)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "MainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Val's Burek Adventures Menu"
