@@ -32,6 +32,10 @@
 
         Burek.Top = -100
         Burek.Left = Rnd() * Me.Size.Width - 60
+
+
+        Cindric.Top = -200
+        Cindric.Left = Rnd() * Me.Size.Width - 100
     End Sub
 
     Private Sub KeyDownFunc(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
@@ -115,15 +119,32 @@
             Burek.Left = Rnd() * Me.Size.Width - 60
         End If
 
+        Cindric.Top += YVel
+        If Cindric.Bounds.IntersectsWith(Player.Bounds) Then
+            Smrt(True)
+        End If
+        If Cindric.Top > Me.Size.Height + 150 Then
+            Cindric.Top = -100
+            Cindric.Left = Rnd() * Me.Size.Width - 100
+        End If
+
         If YVel < -20 Then
-            Smrt()
+            Smrt(False)
         End If
 
     End Sub
 
-    Private Sub Smrt()
+    Private Sub Smrt(ByVal JeLiCindric)
         UpdateTimer.Stop()
-        Dim mbr = MessageBox.Show("Umrli ste. Želite li probati još jednom? Vaša visina bila je " + Str(Math.Round(YPos / 10)) + ", a pokupili ste " + Str(BurekCount) + " bureka", "Smrt", MessageBoxButtons.YesNo)
+
+        Dim mbr As DialogResult
+
+        If JeLiCindric Then
+            mbr = MessageBox.Show("Ubio vas je Bibinjac! Želite li probati još jednom? Vaša visina bila je " + Str(Math.Round(YPos / 10)) + ", a pokupili ste " + Str(BurekCount) + " bureka", "Smrt", MessageBoxButtons.YesNo)
+        Else
+            mbr = MessageBox.Show("Pali ste u smrt! Želite li probati još jednom? Vaša visina bila je " + Str(Math.Round(YPos / 10)) + ", a pokupili ste " + Str(BurekCount) + " bureka", "Smrt", MessageBoxButtons.YesNo)
+        End If
+
         If mbr = DialogResult.Yes Then
             Retry()
         End If
@@ -147,6 +168,9 @@
         BurekCount = 0
         Burek.Top = -100
         Burek.Left = Rnd() * Me.Size.Width - 60
+
+        Cindric.Top = -100
+        Cindric.Left = Rnd() * Me.Size.Width - 100
 
         Player.Left = Me.Size.Width / 2 - 50
 

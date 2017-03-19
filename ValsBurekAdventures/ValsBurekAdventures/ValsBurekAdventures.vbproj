@@ -163,5 +163,8 @@
   <ItemGroup>
     <None Include="Resources\Burek.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\580b57fbd9996e24bc43be68.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
