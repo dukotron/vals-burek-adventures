@@ -160,6 +160,8 @@ Partial Class Game
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(381, 563)
+        Me.Controls.Add(Me.LabelBurek)
+        Me.Controls.Add(Me.LabelVisina)
         Me.Controls.Add(Me.Cindric)
         Me.Controls.Add(Me.Burek)
         Me.Controls.Add(Me.LabelZapocinje)
@@ -167,8 +169,6 @@ Partial Class Game
         Me.Controls.Add(Me.Platform3)
         Me.Controls.Add(Me.Platform2)
         Me.Controls.Add(Me.Platform1)
-        Me.Controls.Add(Me.LabelBurek)
-        Me.Controls.Add(Me.LabelVisina)
         Me.Controls.Add(Me.LabelHeightDash)
         Me.DoubleBuffered = True
         Me.Name = "Game"
