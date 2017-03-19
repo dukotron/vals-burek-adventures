@@ -143,7 +143,10 @@
 
         Jogurt.Top += YVel
         If Jogurt.Bounds.IntersectsWith(Player.Bounds) Then
+            Jogurt.Top = -100
+            Jogurt.Left = Rnd() * Me.Size.Width - 60
 
+            My.Computer.Audio.Play(My.Resources.gg, AudioPlayMode.Background)
         End If
         If Jogurt.Top > Me.Size.Height + 150 Then
             Jogurt.Top = -100

@@ -173,12 +173,6 @@
     <None Include="Resources\Meme5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Meme7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Meme8.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\0477.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +189,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Meme0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meme7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meme8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gg.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

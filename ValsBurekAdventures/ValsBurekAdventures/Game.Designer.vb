@@ -29,20 +29,20 @@ Partial Class Game
         Me.TimerStart = New System.Windows.Forms.Timer(Me.components)
         Me.LabelZapocinje = New System.Windows.Forms.Label()
         Me.LabelBurek = New System.Windows.Forms.Label()
+        Me.Jogurt = New System.Windows.Forms.PictureBox()
         Me.Cindric = New System.Windows.Forms.PictureBox()
         Me.Burek = New System.Windows.Forms.PictureBox()
         Me.Player = New System.Windows.Forms.PictureBox()
         Me.Platform3 = New System.Windows.Forms.PictureBox()
         Me.Platform2 = New System.Windows.Forms.PictureBox()
         Me.Platform1 = New System.Windows.Forms.PictureBox()
-        Me.Jogurt = New System.Windows.Forms.PictureBox()
+        CType(Me.Jogurt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cindric, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Burek, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Jogurt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UpdateTimer
@@ -93,6 +93,16 @@ Partial Class Game
         Me.LabelBurek.Size = New System.Drawing.Size(95, 26)
         Me.LabelBurek.TabIndex = 8
         Me.LabelBurek.Text = "BUREK:"
+        '
+        'Jogurt
+        '
+        Me.Jogurt.Image = Global.ValsBurekAdventures.My.Resources.Resources.Meme0
+        Me.Jogurt.Location = New System.Drawing.Point(40, 68)
+        Me.Jogurt.Name = "Jogurt"
+        Me.Jogurt.Size = New System.Drawing.Size(47, 50)
+        Me.Jogurt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Jogurt.TabIndex = 10
+        Me.Jogurt.TabStop = False
         '
         'Cindric
         '
@@ -156,29 +166,19 @@ Partial Class Game
         Me.Platform1.TabIndex = 1
         Me.Platform1.TabStop = False
         '
-        'Jogurt
-        '
-        Me.Jogurt.Image = Global.ValsBurekAdventures.My.Resources.Resources.Meme0
-        Me.Jogurt.Location = New System.Drawing.Point(40, 68)
-        Me.Jogurt.Name = "Jogurt"
-        Me.Jogurt.Size = New System.Drawing.Size(47, 50)
-        Me.Jogurt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Jogurt.TabIndex = 10
-        Me.Jogurt.TabStop = False
-        '
         'Game
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(381, 563)
+        Me.Controls.Add(Me.Player)
         Me.Controls.Add(Me.Jogurt)
         Me.Controls.Add(Me.LabelBurek)
         Me.Controls.Add(Me.LabelVisina)
         Me.Controls.Add(Me.Cindric)
         Me.Controls.Add(Me.Burek)
         Me.Controls.Add(Me.LabelZapocinje)
-        Me.Controls.Add(Me.Player)
         Me.Controls.Add(Me.Platform3)
         Me.Controls.Add(Me.Platform2)
         Me.Controls.Add(Me.Platform1)
@@ -189,13 +189,13 @@ Partial Class Game
         Me.Name = "Game"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Val's Burek Adventures"
+        CType(Me.Jogurt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cindric, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Burek, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Platform3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Platform2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Platform1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Jogurt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
