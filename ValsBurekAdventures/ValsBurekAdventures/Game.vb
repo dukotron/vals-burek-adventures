@@ -44,10 +44,17 @@
         End If
     End Sub
 
+    Private Sub TimerStart_Tick(sender As Object, e As EventArgs) Handles TimerStart.Tick
+        TimerStart.Stop()
+        UpdateTimer.Start()
+        LabelZapocinje.Visible = False
+    End Sub
+
     Private Sub Update_Tick(sender As Object, e As EventArgs) Handles UpdateTimer.Tick
         YPos += YVel
         LabelVisina.Text = "VISINA: " + Str(Math.Round(YPos / 10))
 
+        LabelHeightDash.Top = YPos Mod Me.Size.Height
 
         If KeyLeft Then
             Player.Left -= 5

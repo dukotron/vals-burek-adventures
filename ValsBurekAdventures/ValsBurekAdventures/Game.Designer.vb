@@ -29,6 +29,9 @@ Partial Class Game
         Me.Platform2 = New System.Windows.Forms.PictureBox()
         Me.Platform3 = New System.Windows.Forms.PictureBox()
         Me.LabelVisina = New System.Windows.Forms.Label()
+        Me.LabelHeightDash = New System.Windows.Forms.Label()
+        Me.TimerStart = New System.Windows.Forms.Timer(Me.components)
+        Me.LabelZapocinje = New System.Windows.Forms.Label()
         CType(Me.Platform1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -37,7 +40,6 @@ Partial Class Game
         '
         'UpdateTimer
         '
-        Me.UpdateTimer.Enabled = True
         Me.UpdateTimer.Interval = 17
         '
         'Platform1
@@ -92,17 +94,44 @@ Partial Class Game
         Me.LabelVisina.TabIndex = 4
         Me.LabelVisina.Text = "VISINA:"
         '
+        'LabelHeightDash
+        '
+        Me.LabelHeightDash.AutoSize = True
+        Me.LabelHeightDash.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.LabelHeightDash.Location = New System.Drawing.Point(13, 13)
+        Me.LabelHeightDash.Name = "LabelHeightDash"
+        Me.LabelHeightDash.Size = New System.Drawing.Size(354, 26)
+        Me.LabelHeightDash.TabIndex = 5
+        Me.LabelHeightDash.Text = "__                                                 __"
+        '
+        'TimerStart
+        '
+        Me.TimerStart.Enabled = True
+        Me.TimerStart.Interval = 3000
+        '
+        'LabelZapocinje
+        '
+        Me.LabelZapocinje.AutoSize = True
+        Me.LabelZapocinje.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.LabelZapocinje.Location = New System.Drawing.Point(35, 153)
+        Me.LabelZapocinje.Name = "LabelZapocinje"
+        Me.LabelZapocinje.Size = New System.Drawing.Size(305, 29)
+        Me.LabelZapocinje.TabIndex = 6
+        Me.LabelZapocinje.Text = "Igra započinje u 3 sekunde."
+        '
         'Game
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(381, 563)
+        Me.Controls.Add(Me.LabelZapocinje)
         Me.Controls.Add(Me.LabelVisina)
         Me.Controls.Add(Me.Player)
         Me.Controls.Add(Me.Platform3)
         Me.Controls.Add(Me.Platform2)
         Me.Controls.Add(Me.Platform1)
+        Me.Controls.Add(Me.LabelHeightDash)
         Me.DoubleBuffered = True
         Me.Name = "Game"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -122,4 +151,7 @@ Partial Class Game
     Friend WithEvents Platform2 As PictureBox
     Friend WithEvents Platform3 As PictureBox
     Friend WithEvents LabelVisina As Label
+    Friend WithEvents LabelHeightDash As Label
+    Friend WithEvents TimerStart As Timer
+    Friend WithEvents LabelZapocinje As Label
 End Class
