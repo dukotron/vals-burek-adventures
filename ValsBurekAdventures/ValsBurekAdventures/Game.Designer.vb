@@ -24,65 +24,26 @@ Partial Class Game
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.UpdateTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.Platform1 = New System.Windows.Forms.PictureBox()
-        Me.Player = New System.Windows.Forms.PictureBox()
-        Me.Platform2 = New System.Windows.Forms.PictureBox()
-        Me.Platform3 = New System.Windows.Forms.PictureBox()
         Me.LabelVisina = New System.Windows.Forms.Label()
         Me.LabelHeightDash = New System.Windows.Forms.Label()
         Me.TimerStart = New System.Windows.Forms.Timer(Me.components)
         Me.LabelZapocinje = New System.Windows.Forms.Label()
-        CType(Me.Platform1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Burek = New System.Windows.Forms.PictureBox()
+        Me.Player = New System.Windows.Forms.PictureBox()
+        Me.Platform3 = New System.Windows.Forms.PictureBox()
+        Me.Platform2 = New System.Windows.Forms.PictureBox()
+        Me.Platform1 = New System.Windows.Forms.PictureBox()
+        Me.LabelBurek = New System.Windows.Forms.Label()
+        CType(Me.Burek, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Platform2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Platform3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Platform2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Platform1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UpdateTimer
         '
         Me.UpdateTimer.Interval = 17
-        '
-        'Platform1
-        '
-        Me.Platform1.Image = Global.ValsBurekAdventures.My.Resources.Resources.Platforma
-        Me.Platform1.Location = New System.Drawing.Point(22, 232)
-        Me.Platform1.Name = "Platform1"
-        Me.Platform1.Size = New System.Drawing.Size(135, 17)
-        Me.Platform1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Platform1.TabIndex = 1
-        Me.Platform1.TabStop = False
-        '
-        'Player
-        '
-        Me.Player.BackColor = System.Drawing.Color.Transparent
-        Me.Player.Image = Global.ValsBurekAdventures.My.Resources.Resources.Obama_head
-        Me.Player.InitialImage = Global.ValsBurekAdventures.My.Resources.Resources.Obama_head
-        Me.Player.Location = New System.Drawing.Point(152, 423)
-        Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(59, 74)
-        Me.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Player.TabIndex = 0
-        Me.Player.TabStop = False
-        '
-        'Platform2
-        '
-        Me.Platform2.Image = Global.ValsBurekAdventures.My.Resources.Resources.Platforma
-        Me.Platform2.Location = New System.Drawing.Point(113, 291)
-        Me.Platform2.Name = "Platform2"
-        Me.Platform2.Size = New System.Drawing.Size(135, 17)
-        Me.Platform2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Platform2.TabIndex = 2
-        Me.Platform2.TabStop = False
-        '
-        'Platform3
-        '
-        Me.Platform3.Image = Global.ValsBurekAdventures.My.Resources.Resources.Platforma
-        Me.Platform3.Location = New System.Drawing.Point(214, 352)
-        Me.Platform3.Name = "Platform3"
-        Me.Platform3.Size = New System.Drawing.Size(135, 17)
-        Me.Platform3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Platform3.TabIndex = 3
-        Me.Platform3.TabStop = False
         '
         'LabelVisina
         '
@@ -119,27 +80,92 @@ Partial Class Game
         Me.LabelZapocinje.TabIndex = 6
         Me.LabelZapocinje.Text = "Igra započinje u 3 sekunde."
         '
+        'Burek
+        '
+        Me.Burek.Image = Global.ValsBurekAdventures.My.Resources.Resources.Burek
+        Me.Burek.Location = New System.Drawing.Point(214, 91)
+        Me.Burek.Name = "Burek"
+        Me.Burek.Size = New System.Drawing.Size(47, 50)
+        Me.Burek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Burek.TabIndex = 7
+        Me.Burek.TabStop = False
+        '
+        'Player
+        '
+        Me.Player.BackColor = System.Drawing.Color.Transparent
+        Me.Player.Image = Global.ValsBurekAdventures.My.Resources.Resources.Obama_head
+        Me.Player.InitialImage = Global.ValsBurekAdventures.My.Resources.Resources.Obama_head
+        Me.Player.Location = New System.Drawing.Point(152, 423)
+        Me.Player.Name = "Player"
+        Me.Player.Size = New System.Drawing.Size(59, 74)
+        Me.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Player.TabIndex = 0
+        Me.Player.TabStop = False
+        '
+        'Platform3
+        '
+        Me.Platform3.Image = Global.ValsBurekAdventures.My.Resources.Resources.Platforma
+        Me.Platform3.Location = New System.Drawing.Point(214, 352)
+        Me.Platform3.Name = "Platform3"
+        Me.Platform3.Size = New System.Drawing.Size(98, 17)
+        Me.Platform3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Platform3.TabIndex = 3
+        Me.Platform3.TabStop = False
+        '
+        'Platform2
+        '
+        Me.Platform2.Image = Global.ValsBurekAdventures.My.Resources.Resources.Platforma
+        Me.Platform2.Location = New System.Drawing.Point(113, 285)
+        Me.Platform2.Name = "Platform2"
+        Me.Platform2.Size = New System.Drawing.Size(98, 17)
+        Me.Platform2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Platform2.TabIndex = 2
+        Me.Platform2.TabStop = False
+        '
+        'Platform1
+        '
+        Me.Platform1.Image = Global.ValsBurekAdventures.My.Resources.Resources.Platforma
+        Me.Platform1.Location = New System.Drawing.Point(22, 232)
+        Me.Platform1.Name = "Platform1"
+        Me.Platform1.Size = New System.Drawing.Size(98, 17)
+        Me.Platform1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Platform1.TabIndex = 1
+        Me.Platform1.TabStop = False
+        '
+        'LabelBurek
+        '
+        Me.LabelBurek.AutoSize = True
+        Me.LabelBurek.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.LabelBurek.Location = New System.Drawing.Point(12, 502)
+        Me.LabelBurek.Name = "LabelBurek"
+        Me.LabelBurek.Size = New System.Drawing.Size(95, 26)
+        Me.LabelBurek.TabIndex = 8
+        Me.LabelBurek.Text = "BUREK:"
+        '
         'Game
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(381, 563)
+        Me.Controls.Add(Me.Burek)
         Me.Controls.Add(Me.LabelZapocinje)
-        Me.Controls.Add(Me.LabelVisina)
         Me.Controls.Add(Me.Player)
         Me.Controls.Add(Me.Platform3)
         Me.Controls.Add(Me.Platform2)
         Me.Controls.Add(Me.Platform1)
+        Me.Controls.Add(Me.LabelBurek)
+        Me.Controls.Add(Me.LabelVisina)
         Me.Controls.Add(Me.LabelHeightDash)
         Me.DoubleBuffered = True
         Me.Name = "Game"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Val's Burek Adventures"
-        CType(Me.Platform1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Burek, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Platform2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Platform3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Platform2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Platform1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -154,4 +180,6 @@ Partial Class Game
     Friend WithEvents LabelHeightDash As Label
     Friend WithEvents TimerStart As Timer
     Friend WithEvents LabelZapocinje As Label
+    Friend WithEvents Burek As PictureBox
+    Friend WithEvents LabelBurek As Label
 End Class
